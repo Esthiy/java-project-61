@@ -1,9 +1,18 @@
-plugins {
-    id("java")
-}
-
 group = "hexlet.code"
 version = "1.0-SNAPSHOT"
+
+plugins {
+    id("java")
+    application
+}
+
+tasks.withType<JavaCompile> {
+    options.release = 20
+}
+
+application {
+    mainClass.set("hexlet.code.App")
+}
 
 repositories {
     mavenCentral()

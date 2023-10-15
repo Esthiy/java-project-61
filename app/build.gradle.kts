@@ -6,12 +6,16 @@ plugins {
     application
 }
 
+application {
+    mainClass.set("hexlet.code.App")
+}
+
 tasks.withType<JavaCompile> {
     options.release = 20
 }
 
-application {
-    mainClass.set("hexlet.code.App")
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
 }
 
 repositories {

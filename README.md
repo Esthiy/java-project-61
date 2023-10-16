@@ -4,4 +4,4 @@
 
 
 ### Games examples:
-[Even Game](hhttps://asciinema.org/a/awjZMJiIyap2qrzGWwTOcAwPy)
+[Even Game](https://asciinema.org/a/awjZMJiIyap2qrzGWwTOcAwPy)

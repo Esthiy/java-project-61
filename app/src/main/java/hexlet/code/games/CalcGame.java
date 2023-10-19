@@ -12,6 +12,8 @@ import static hexlet.code.Engine.showSuccessMessage;
 public final class CalcGame {
 
     private static final char[] AVAILABLE_OPERATIONS = {'+', '-', '*'};
+    private static final int MIN_INT_TO_CALC = 0;
+    private static final int MAX_INT_TO_CALC = 100;
 
     public static void startGame() {
         greetUser();
@@ -20,8 +22,8 @@ public final class CalcGame {
 
         for (int i = 0; i < LEVELS_QUANTITY; i++) {
             var random = new Random();
-            var firstNumber = random.nextInt(0, 100);
-            var secondNumber = random.nextInt(0, 100);
+            var firstNumber = random.nextInt(MIN_INT_TO_CALC, MAX_INT_TO_CALC);
+            var secondNumber = random.nextInt(MIN_INT_TO_CALC, MAX_INT_TO_CALC);
             var operation = AVAILABLE_OPERATIONS[random.nextInt(0, AVAILABLE_OPERATIONS.length)];
 
             String question = String.join(" ", String.valueOf(firstNumber),

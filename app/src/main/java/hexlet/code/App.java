@@ -12,6 +12,13 @@ import java.util.Scanner;
 public final class App {
 
     public static final Scanner SCANNER = new Scanner(System.in);
+    private static final int EXIT_ITEM_MENU_NUMBER = 0;
+    private static final int GREET_ITEM_MENU_NUMBER = 1;
+    private static final int EVEN_ITEM_MENU_NUMBER = 2;
+    private static final int CALC_ITEM_MENU_NUMBER = 3;
+    private static final int GCD_ITEM_MENU_NUMBER = 4;
+    private static final int PROGRESSION_ITEM_MENU_NUMBER = 5;
+    private static final int PRIME_ITEM_MENU_NUMBER = 6;
 
     public static void main(String[] args) {
         showMenuItem();
@@ -21,13 +28,13 @@ public final class App {
 
     private static void showMenuItem() {
         System.out.println("Please enter the game number and press Enter.");
-        System.out.println("1 - Greet");
-        System.out.println("2 - Even");
-        System.out.println("3 - Calc");
-        System.out.println("4 - GCD");
-        System.out.println("5 - Progression");
-        System.out.println("6 - Prime");
-        System.out.println("0 - Exit");
+        System.out.println(GREET_ITEM_MENU_NUMBER + " - Greet");
+        System.out.println(EVEN_ITEM_MENU_NUMBER + " - Even");
+        System.out.println(CALC_ITEM_MENU_NUMBER + " - Calc");
+        System.out.println(GCD_ITEM_MENU_NUMBER + " - GCD");
+        System.out.println(PROGRESSION_ITEM_MENU_NUMBER + " - Progression");
+        System.out.println(PRIME_ITEM_MENU_NUMBER + " - Prime");
+        System.out.println(EXIT_ITEM_MENU_NUMBER + " - Exit");
     }
 
     private static void selectMenuItem() {
@@ -44,13 +51,13 @@ public final class App {
         System.out.printf("Your choice: %s%n", gameNumber);
 
         switch (gameNumber) {
-            case 1 -> Cli.getUsernameAndGreet();
-            case 2 -> EvenGame.startGame();
-            case 3 -> CalcGame.startGame();
-            case 4 -> GcdGame.startGame();
-            case 5 -> ProgressionGame.startGame();
-            case 6 -> PrimeGame.startGame();
-            case 0 -> {
+            case GREET_ITEM_MENU_NUMBER -> Cli.getUsernameAndGreet();
+            case EVEN_ITEM_MENU_NUMBER -> EvenGame.startGame();
+            case CALC_ITEM_MENU_NUMBER -> CalcGame.startGame();
+            case GCD_ITEM_MENU_NUMBER -> GcdGame.startGame();
+            case PROGRESSION_ITEM_MENU_NUMBER -> ProgressionGame.startGame();
+            case PRIME_ITEM_MENU_NUMBER -> PrimeGame.startGame();
+            case EXIT_ITEM_MENU_NUMBER -> {
                 System.out.println("Good bye!");
                 System.exit(0);
             }

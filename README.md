@@ -4,4 +4,6 @@
 
 
 ### Games examples:
-[Even Game](https://asciinema.org/a/awjZMJiIyap2qrzGWwTOcAwPy)
+[Even Game](https://asciinema.org/a/S5wS0G0xkXvlXZClS8l8XSbBE)
+
+[Calc Game](https://asciinema.org/a/g1Ce7uqNqYhQHHq8oP2Zpmxfr)

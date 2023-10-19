@@ -1,22 +1,18 @@
 package hexlet.code;
 
+import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class App {
+public final class App {
 
     public static final Scanner SCANNER = new Scanner(System.in);
-    private static boolean running = true;
-
-    public static String userName;
 
     public static void main(String[] args) {
-        while (running) {
-            showMenuItem();
-            selectMenuItem();
-        }
+        showMenuItem();
+        selectMenuItem();
         SCANNER.close();
     }
 
@@ -24,6 +20,7 @@ public class App {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
+        System.out.println("3 - Calc");
         System.out.println("0 - Exit");
     }
 
@@ -40,16 +37,13 @@ public class App {
         }
         System.out.printf("Your choice: %s%n", gameNumber);
 
-//        String username;
         switch (gameNumber) {
-            case 1 -> {
-                userName = Cli.getUsernameAndGreet();
-                EvenGame.startGame(userName);
-            }
-            case 2 -> EvenGame.startGame(userName);
+            case 1 -> Cli.getUsernameAndGreet();
+            case 2 -> EvenGame.startGame();
+            case 3 -> CalcGame.startGame();
             case 0 -> {
                 System.out.println("Good bye!");
-                running = false;
+                System.exit(0);
             }
             default -> throw new UnsupportedOperationException("Incorrect number was selected");
         }

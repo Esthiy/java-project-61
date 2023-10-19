@@ -3,11 +3,7 @@ package hexlet.code.games;
 import java.util.Random;
 
 import static hexlet.code.Engine.LEVELS_QUANTITY;
-import static hexlet.code.Engine.checkUserAnswer;
-import static hexlet.code.Engine.greetUser;
-import static hexlet.code.Engine.showGameRules;
-import static hexlet.code.Engine.showQuestion;
-import static hexlet.code.Engine.showSuccessMessage;
+import static hexlet.code.Engine.runGame;
 
 public final class CalcGame {
 
@@ -16,11 +12,11 @@ public final class CalcGame {
     private static final int MAX_INT_TO_CALC = 100;
 
     public static void startGame() {
-        greetUser();
 
-        showGameRules("What is the result of the expression?");
+        String rule = "What is the result of the expression?";
+        String[][] gameData = new String[LEVELS_QUANTITY][2];
 
-        for (int i = 0; i < LEVELS_QUANTITY; i++) {
+        for (int i = 0; i < gameData.length; i++) {
             var random = new Random();
             var firstNumber = random.nextInt(MIN_INT_TO_CALC, MAX_INT_TO_CALC);
             var secondNumber = random.nextInt(MIN_INT_TO_CALC, MAX_INT_TO_CALC);
@@ -30,24 +26,23 @@ public final class CalcGame {
                     String.valueOf(operation), String.valueOf(secondNumber));
             int correctAnswer = calculateCorrectResult(firstNumber, secondNumber, operation);
 
-            showQuestion(question);
-
-            checkUserAnswer(String.valueOf(correctAnswer));
+            gameData[i][0] = question;
+            gameData[i][1] = String.valueOf(correctAnswer);
         }
 
-        showSuccessMessage();
+        runGame(rule, gameData);
     }
 
-    private static int calculateCorrectResult(int firstNumber, int secondNumber, char operation) {
+    private static int calculateCorrectResult(int a, int b, char operation) {
         switch (operation) {
             case '+' -> {
-                return firstNumber + secondNumber;
+                return a + b;
             }
             case '-' -> {
-                return firstNumber - secondNumber;
+                return a - b;
             }
             case '*' -> {
-                return firstNumber * secondNumber;
+                return a * b;
             }
             default -> throw new UnsupportedOperationException("Operation was not implemented");
         }

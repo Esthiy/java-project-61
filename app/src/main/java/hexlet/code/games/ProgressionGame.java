@@ -27,12 +27,15 @@ public final class ProgressionGame {
 
             var questionBuilder = new StringBuilder();
             for (int number : progression) {
-                questionBuilder.append(number);
+                if (number == correctAnswer) {
+                    questionBuilder.append("..");
+                } else {
+                    questionBuilder.append(number);
+                }
                 questionBuilder.append(" ");
             }
 
-            String question = questionBuilder.toString();
-            question = question.replace(correctAnswerStr, "..").trim();
+            String question = questionBuilder.toString().trim();
 
             gameData[i][0] = question;
             gameData[i][1] = correctAnswerStr;
@@ -45,6 +48,9 @@ public final class ProgressionGame {
         var progressionSize = RANDOM.nextInt(MIN_PROGRESSION_SIZE, MAX_PROGRESSION_SIZE);
         var start = RANDOM.nextInt(MIN_START_NUMBER, MAX_START_NUMBER);
         var interval = RANDOM.nextInt(MIN_INTERVAL, MAX_INTERVAL);
+        while (interval == 0) {
+            interval = RANDOM.nextInt(MIN_INTERVAL, MAX_INTERVAL);
+        }
 
         var result = new int[progressionSize];
         result[0] = start;

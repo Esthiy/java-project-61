@@ -9,3 +9,5 @@
 [Calc Game](https://asciinema.org/a/g1Ce7uqNqYhQHHq8oP2Zpmxfr)
 
 [GCD Game](https://asciinema.org/a/tVIubDaiHL2I1TDa9wtSiehfO)
+
+[Progression Game](https://asciinema.org/a/6wNWsHn0AftGcq9BOFfF6mmTo)

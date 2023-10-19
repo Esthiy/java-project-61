@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
 import hexlet.code.games.GcdGame;
+import hexlet.code.games.ProgressionGame;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -23,6 +24,7 @@ public final class App {
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
+        System.out.println("5 - Progression");
         System.out.println("0 - Exit");
     }
 
@@ -44,6 +46,7 @@ public final class App {
             case 2 -> EvenGame.startGame();
             case 3 -> CalcGame.startGame();
             case 4 -> GcdGame.startGame();
+            case 5 -> ProgressionGame.startGame();
             case 0 -> {
                 System.out.println("Good bye!");
                 System.exit(0);

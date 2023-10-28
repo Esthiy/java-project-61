@@ -5,7 +5,7 @@ import java.util.Random;
 import static hexlet.code.Engine.LEVELS_QUANTITY;
 import static hexlet.code.Engine.runGame;
 
-public final class GcdGame {
+public final class Gcd {
 
     private static final int MIN_INT_TO_CALC = -100;
     private static final int MAX_INT_TO_CALC = 100;

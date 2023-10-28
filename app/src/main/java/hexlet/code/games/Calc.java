@@ -5,7 +5,7 @@ import java.util.Random;
 import static hexlet.code.Engine.LEVELS_QUANTITY;
 import static hexlet.code.Engine.runGame;
 
-public final class CalcGame {
+public final class Calc {
 
     private static final char[] AVAILABLE_OPERATIONS = {'+', '-', '*'};
     private static final int MIN_INT_TO_CALC = 0;

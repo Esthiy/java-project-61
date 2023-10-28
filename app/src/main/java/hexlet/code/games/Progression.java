@@ -5,7 +5,7 @@ import java.util.Random;
 import static hexlet.code.Engine.LEVELS_QUANTITY;
 import static hexlet.code.Engine.runGame;
 
-public final class ProgressionGame {
+public final class Progression {
 
     private static final int MIN_PROGRESSION_SIZE = 5;
     private static final int MAX_PROGRESSION_SIZE = 11;

@@ -20,7 +20,7 @@ public final class Engine {
             } else {
                 System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.%n", guess, gameData[i][1]);
                 System.out.printf("Let's try again, %s!%n", userName);
-                System.exit(0);
+                return;
             }
         }
 
